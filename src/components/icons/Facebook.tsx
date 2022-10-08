@@ -1,4 +1,8 @@
-const Facebook = ({ className }) => {
+import { FC } from 'react';
+
+import type { IconType } from '~/@types/';
+
+const Facebook: FC<IconType> = ({ className }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
