@@ -8,7 +8,7 @@ const Header = () => {
     <header className='p-5 mx-auto max-w-7xl sticky flex justify-between'>
       <Nav />
 
-      <Link href='/' className='flex items-center gap-2'>
+      <Link className='flex items-center gap-2' href='/'>
         <MailIcon className='h-8 w-8 stroke-gray-400' />
         <span className='hidden uppercase text-sm text-gray-400 md:inline-block'>
           Get In Touch

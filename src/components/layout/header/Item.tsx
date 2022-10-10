@@ -10,7 +10,7 @@ interface ItemProps {
 const Item: FC<ItemProps> = ({ href, children }) => {
   return (
     <li>
-      <Link href={href} isExternal>
+      <Link isExternal href={href}>
         {children}
       </Link>
     </li>

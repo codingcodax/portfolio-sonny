@@ -5,19 +5,19 @@ import type { IconType } from '~/@types/';
 const Instagram: FC<IconType> = ({ className }) => {
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
       className={className}
-      viewBox='0 0 24 24'
-      stroke='currentColor'
       fill='none'
-      strokeWidth='2'
+      stroke='currentColor'
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth='2'
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
     >
-      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-      <rect x='4' y='4' width='16' height='16' rx='4' />
+      <path d='M0 0h24v24H0z' fill='none' stroke='none' />
+      <rect height='16' rx='4' width='16' x='4' y='4' />
       <circle cx='12' cy='12' r='3' />
-      <line x1='16.5' y1='7.5' x2='16.5' y2='7.501' />
+      <line x1='16.5' x2='16.5' y1='7.5' y2='7.501' />
     </svg>
   );
 };

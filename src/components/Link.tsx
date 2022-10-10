@@ -17,7 +17,7 @@ const Link: FC<LinkProps> = ({
   return (
     <NextLink href={href}>
       {isExternal ? (
-        <a rel='noopener noreferrer' target='_blank' className={className}>
+        <a className={className} rel='noopener noreferrer' target='_blank'>
           {children}
         </a>
       ) : (
