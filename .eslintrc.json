@@ -7,6 +7,15 @@
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
+    "react/jsx-sort-props": [
+      "warn",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "noSortAlphabetically": false,
+        "reservedFirst": true
+      }
+    ],
     "import/order": [
       "warn",
       {
