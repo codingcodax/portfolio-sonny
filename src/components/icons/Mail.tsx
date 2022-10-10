@@ -1,4 +1,8 @@
-const Mail = ({ className }) => {
+import { FC } from 'react';
+
+import type { IconType } from '~/@types';
+
+const Mail: FC<IconType> = ({ className }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
