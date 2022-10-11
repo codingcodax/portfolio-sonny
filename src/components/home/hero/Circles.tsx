@@ -6,7 +6,7 @@ const Circles = () => {
   return (
     <motion.div
       animate='show'
-      className='relative flex justify-center items-center'
+      className='relative flex justify-center items-center z-10'
       initial='hidden'
       variants={circlesAnimation}
     >
