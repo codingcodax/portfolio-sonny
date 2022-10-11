@@ -1,10 +1,13 @@
+import { motion } from 'framer-motion';
+
+import { comingRight } from '~/animations/header';
 import { InstagramIcon, TwitterIcon, YoutubeIcon } from '~/components/icons';
 
 import Item from './Item';
 
 const Nav = () => {
   return (
-    <nav>
+    <motion.nav animate='show' initial='hidden' variants={comingRight}>
       <ul className='flex gap-4'>
         <Item href='https://www.youtube.com/channel/UCMY0GhV1HuX4XdbgalC77VQ'>
           <YoutubeIcon className='h-8 w-8 stroke-gray-400' />
@@ -18,7 +21,7 @@ const Nav = () => {
           <TwitterIcon className='h-8 w-8 stroke-gray-400' />
         </Item>
       </ul>
-    </nav>
+    </motion.nav>
   );
 };
 
