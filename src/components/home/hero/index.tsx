@@ -1,5 +1,7 @@
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
+import Circles from './Circles';
+
 const Hero = () => {
   const [text] = useTypewriter({
     words: [
@@ -12,7 +14,8 @@ const Hero = () => {
   });
 
   return (
-    <div>
+    <div className='h-screen flex items-center justify-center flex-col space-y-8 text-center snap-center overflow-hidden'>
+      <Circles />
       <h1>
         <span>{text}</span>
         <Cursor cursorColor='#f7ab0a' />
