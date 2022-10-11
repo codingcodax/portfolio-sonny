@@ -5,7 +5,7 @@ import { Hero } from '~/components/home';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className='h-screen text-white bg-[rgb(36,36,36)]'>
       <Header />
       <Hero />
     </div>
