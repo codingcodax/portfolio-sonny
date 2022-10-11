@@ -16,7 +16,7 @@ const Hero = () => {
   });
 
   return (
-    <div className='h-screen flex items-center justify-center flex-col space-y-8 text-center snap-center overflow-hidden'>
+    <main className='h-screen flex items-center justify-center flex-col space-y-8 text-center snap-center overflow-hidden'>
       <Circles />
 
       <div>
@@ -41,7 +41,7 @@ const Hero = () => {
 
         <Links />
       </div>
-    </div>
+    </main>
   );
 };
 
