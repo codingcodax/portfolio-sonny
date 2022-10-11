@@ -1,16 +1,28 @@
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+
+import { aboutImageAnimation } from '~/animations/home';
 
 const About = () => {
   return (
-    <section
+    <motion.section
       className='px-10 mx-auto h-screen max-w-7xl relative flex justify-evenly items-center flex-col md:flex-row text-center md:text-left snap-center'
       id='about'
+      initial={{ opacity: 0 }}
+      transition={{ duration: 1.5 }}
+      whileInView={{ opacity: 1 }}
     >
       <h2 className='absolute top-24 text-gray-500 text-2xl uppercase tracking-[20px]'>
         About
       </h2>
 
-      <div className='-mb-20 md:mb-0 h-56 md:h-95 xl:h-[600px] w-56 md:w-64 xl:w-[500px] flex-shrink-0'>
+      <motion.div
+        className='-mb-20 md:mb-0 h-56 md:h-95 xl:h-[600px] w-56 md:w-64 xl:w-[500px] flex-shrink-0'
+        initial='hidden'
+        variants={aboutImageAnimation}
+        viewport={{ once: true }}
+        whileInView='whileInView'
+      >
         <Image
           alt='Alexis'
           className='rounded-full md:rounded-lg'
@@ -19,7 +31,7 @@ const About = () => {
           src='https://media-exp1.licdn.com/dms/image/C4E03AQEX_9Lp5RfjuQ/profile-displayphoto-shrink_800_800/0/1610992691122?e=1671062400&v=beta&t=wxtVwsIGZShz83FKzZ42Fbh4fFi-2WWVFbjO0xYKGrU'
           width={500}
         />
-      </div>
+      </motion.div>
 
       <div className='px-0 md:px-10'>
         <h4 className='mb-10 text-4xl font-semibold'>
@@ -44,7 +56,7 @@ const About = () => {
           me bring my designs and Stitches for CSS-in-JS.
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
