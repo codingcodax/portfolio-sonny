@@ -16,7 +16,7 @@ const Hero = () => {
   });
 
   return (
-    <main className='h-screen flex items-center justify-center flex-col space-y-8 text-center snap-center overflow-hidden'>
+    <main className='h-screen flex items-center justify-center flex-col space-y-8 text-center snap-start overflow-hidden'>
       <Circles />
 
       <div>
