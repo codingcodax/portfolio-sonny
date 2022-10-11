@@ -10,15 +10,15 @@ const Nav = () => {
     <motion.nav animate='show' initial='hidden' variants={comingRight}>
       <ul className='flex gap-4'>
         <Item href='https://www.youtube.com/channel/UCMY0GhV1HuX4XdbgalC77VQ'>
-          <YoutubeIcon className='h-8 w-8 stroke-gray-400' />
+          <YoutubeIcon className='h-6 w-6 stroke-gray-400' />
         </Item>
 
         <Item href='https://www.instagram.com/codingcodax/'>
-          <InstagramIcon className='h-8 w-8 stroke-gray-400' />
+          <InstagramIcon className='h-6 w-6 stroke-gray-400' />
         </Item>
 
         <Item href='https://twitter.com/codingcodax'>
-          <TwitterIcon className='h-8 w-8 stroke-gray-400' />
+          <TwitterIcon className='h-6 w-6 stroke-gray-400' />
         </Item>
       </ul>
     </motion.nav>
