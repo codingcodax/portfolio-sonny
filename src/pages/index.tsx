@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 
 import { Header } from '~/components/layout';
-import { Hero, About } from '~/components/home';
+import { Hero, About, Experience } from '~/components/home';
 
 const Home: NextPage = () => {
   return (
@@ -9,6 +9,7 @@ const Home: NextPage = () => {
       <Header />
       <Hero />
       <About />
+      <Experience />
     </div>
   );
 };
