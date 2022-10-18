@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const skills = await getSkills();
   const projects = await getProjects();
 
-  return { props: { pageInfo, socials, skills, projects } };
+  return { props: { pageInfo, socials, skills, projects }, revalidate: 10 };
 };
 
 interface HomeProps {
@@ -39,7 +39,7 @@ const Home: NextPage<HomeProps> = ({ pageInfo, skills, socials, projects }) => {
 
   return (
     <div className='h-screen text-white bg-[rgb(36,36,36)] snap-y snap-mandatory overflow-scroll z-0'>
-      <Header />
+      <Header socials={socials} email={pageInfo.email} />
       <Hero />
       <About />
       <Experience />
