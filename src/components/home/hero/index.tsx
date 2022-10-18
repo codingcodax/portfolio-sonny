@@ -1,13 +1,21 @@
+import { FC } from 'react';
 import Image from 'next/image';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
+
+import type { PageInfoType } from '~/@types/';
+import { urlFor } from '~/lib/sanity';
 
 import Circles from './Circles';
 import Links from './links';
 
-const Hero = () => {
+interface HeroProps {
+  pageInfo: PageInfoType;
+}
+
+const Hero: FC<HeroProps> = ({ pageInfo: { name, role, heroImage } }) => {
   const [text] = useTypewriter({
     words: [
-      "Hi, The Name's Alexis Guzman",
+      `Hi, The Name's ${name}`,
       'Guy-who-loves-coffe.tsx',
       '<ButLovesToCodeMore />',
     ],
@@ -21,18 +29,18 @@ const Hero = () => {
 
       <div>
         <Image
-          alt='Alexis'
+          alt={name}
           className='rounded-full'
           height={128}
           objectFit='cover'
-          src='https://media-exp1.licdn.com/dms/image/C4E03AQEX_9Lp5RfjuQ/profile-displayphoto-shrink_800_800/0/1610992691122?e=1671062400&v=beta&t=wxtVwsIGZShz83FKzZ42Fbh4fFi-2WWVFbjO0xYKGrU'
+          src={urlFor(heroImage).url()}
           width={128}
         />
       </div>
 
       <div className='z-20'>
         <h2 className='mb-2 text-gray-500 text-sm uppercase tracking-[15px]'>
-          Frontend Developer
+          {role}
         </h2>
         <h1 className='mb-5 text-5xl lg:text-6xl font-semibold scroll-px-10'>
           <span className='mr-3'>{text}</span>
