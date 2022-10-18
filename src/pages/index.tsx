@@ -40,7 +40,7 @@ const Home: NextPage<HomeProps> = ({ pageInfo, skills, socials, projects }) => {
   return (
     <div className='h-screen text-white bg-[rgb(36,36,36)] snap-y snap-mandatory overflow-scroll z-0'>
       <Header socials={socials} email={pageInfo.email} />
-      <Hero />
+      <Hero pageInfo={pageInfo} />
       <About />
     </div>
   );
