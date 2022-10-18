@@ -38,7 +38,7 @@ const Hero: FC<HeroProps> = ({ pageInfo: { name, role, heroImage } }) => {
         />
       </div>
 
-      <div className='z-20'>
+      <div className='z-10'>
         <h2 className='mb-2 text-gray-500 text-sm uppercase tracking-[15px]'>
           {role}
         </h2>
