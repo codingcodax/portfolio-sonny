@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 
 import { SkillType } from '~/@types';
 
@@ -12,7 +13,12 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
   console.log(skills);
 
   return (
-    <section className='px-10 mx-auto h-screen max-w-7xl snap-start'>
+    <motion.section
+      className='px-10 mx-auto h-screen max-w-7xl snap-start'
+      initial={{ opacity: 0 }}
+      transition={{ duration: 1.5 }}
+      whileInView={{ opacity: 1 }}
+    >
       <h2 className='pt-20 mb-20 text-gray-500 text-center text-2xl uppercase tracking-[20px]'>
         Skills
       </h2>
@@ -22,7 +28,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
           <Item key={skill._id} skill={skill} />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
