@@ -1,9 +1,23 @@
-import React from 'react';
+import Image from 'next/image';
+import { FC } from 'react';
 
-const Item = () => {
+import { SkillType } from '~/@types';
+import { urlFor } from '~/lib/sanity';
+
+interface ItemProps {
+  skill: SkillType;
+}
+
+const Item: FC<ItemProps> = ({ skill: { title, image } }) => {
   return (
-    <div>
-      <p>Item Component</p>
+    <div className='w-fit'>
+      <Image
+        alt={title}
+        height={90}
+        objectFit='contain'
+        src={urlFor(image).url()}
+        width={90}
+      />
     </div>
   );
 };
