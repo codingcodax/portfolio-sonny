@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from 'next';
 
 import { Header } from '~/components/layout';
-import { Hero, About } from '~/components/home';
+import { Hero, About, Skills } from '~/components/home';
 import { PageInfoType, ProjectType, SkillType, SocialType } from '~/@types';
 import {
   getPageInfo,
@@ -42,6 +42,7 @@ const Home: NextPage<HomeProps> = ({ pageInfo, skills, socials, projects }) => {
       <Header socials={socials} email={pageInfo.email} />
       <Hero pageInfo={pageInfo} />
       <About pageInfo={pageInfo} />
+      <Skills />
     </div>
   );
 };
