@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { motion } from 'framer-motion';
 
 import { SkillType } from '~/@types';
+import { skillsAnimation } from '~/animations/home';
 
 import Item from './Item';
 
@@ -23,11 +24,17 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
         Skills
       </h2>
 
-      <div className='mx-auto w-fit grid grid-cols-4 gap-6 justify-center'>
+      <motion.div
+        className='mx-auto w-fit grid grid-cols-4 gap-6 justify-center'
+        initial='hidden'
+        variants={skillsAnimation}
+        viewport={{ once: true }}
+        whileInView='whileInView'
+      >
         {skills.map((skill) => (
           <Item key={skill._id} skill={skill} />
         ))}
-      </div>
+      </motion.div>
     </motion.section>
   );
 };

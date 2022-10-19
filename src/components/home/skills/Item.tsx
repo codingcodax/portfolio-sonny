@@ -1,8 +1,10 @@
-import Image from 'next/image';
 import { FC } from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import { SkillType } from '~/@types';
 import { urlFor } from '~/lib/sanity';
+import { skillsAnimation } from '~/animations/home';
 
 interface ItemProps {
   skill: SkillType;
@@ -10,7 +12,7 @@ interface ItemProps {
 
 const Item: FC<ItemProps> = ({ skill: { title, image } }) => {
   return (
-    <div className='w-fit'>
+    <motion.div className='w-fit' variants={skillsAnimation}>
       <Image
         alt={title}
         height={90}
@@ -18,7 +20,7 @@ const Item: FC<ItemProps> = ({ skill: { title, image } }) => {
         src={urlFor(image).url()}
         width={90}
       />
-    </div>
+    </motion.div>
   );
 };
 
