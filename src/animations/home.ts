@@ -12,3 +12,11 @@ export const aboutImageAnimation = {
   hidden: { opacity: 0, x: -200 },
   whileInView: { opacity: 1, x: 0, transition: { duration: 1.2 } },
 };
+
+export const skillsAnimation = {
+  hidden: { y: 50 },
+  whileInView: {
+    y: 0,
+    transition: { staggerChildren: 0.05, ease: 'easeInOut', duration: 1.2 },
+  },
+};
