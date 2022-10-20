@@ -16,6 +16,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
   return (
     <motion.section
       className='px-10 mx-auto h-screen max-w-7xl snap-start'
+      id='skills'
       initial={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
       whileInView={{ opacity: 1 }}
