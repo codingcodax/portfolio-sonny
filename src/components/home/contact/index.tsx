@@ -2,8 +2,8 @@ import { FC } from 'react';
 
 import { PageInfoType } from '~/@types';
 import { MailIcon, MapIcon } from '~/components/icons';
-import Form from './Form';
 
+import Form from './Form';
 import Item from './Item';
 
 interface ContactProps {
