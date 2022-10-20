@@ -1,8 +1,10 @@
-import Image from 'next/image';
 import { FC } from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import { ProjectType } from '~/@types';
 import { urlFor } from '~/lib/sanity';
+import { projectImageAnimation } from '~/animations/home';
 
 interface ItemProps {
   project: ProjectType;
@@ -16,8 +18,20 @@ const Item: FC<ItemProps> = ({
   length,
 }) => {
   return (
-    <div className='w-screen flex-shrink-0 flex flex-col items-center justify-center snap-center'>
-      <div className='px-2 md:p-0 mt-16 mb-6 h-fit'>
+    <motion.div
+      className='w-screen flex-shrink-0 flex flex-col items-center justify-center snap-center'
+      id='projects'
+      initial={{ opacity: 0 }}
+      transition={{ duration: 1.5 }}
+      whileInView={{ opacity: 1 }}
+    >
+      <motion.div
+        className='px-2 md:p-0 mt-16 mb-6 h-fit'
+        initial='hidden'
+        variants={projectImageAnimation}
+        viewport={{ once: true }}
+        whileInView='whileInView'
+      >
         <Image
           alt={title}
           className='rounded-lg'
@@ -25,7 +39,7 @@ const Item: FC<ItemProps> = ({
           src={urlFor(image).url()}
           width={701}
         />
-      </div>
+      </motion.div>
 
       <div className='mb-4 flex space-x-2'>
         {technologies.map(({ _id, title, image }) => {
@@ -53,7 +67,7 @@ const Item: FC<ItemProps> = ({
 
         <p className='text-lg text-center md:text-left'>{summary}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
