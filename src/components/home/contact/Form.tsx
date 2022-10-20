@@ -14,7 +14,10 @@ const Form = () => {
   };
 
   return (
-    <form className='grid grid-cols-2 gap-2' onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className='mx-auto w-fit grid grid-cols-2 gap-2'
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <input
         required
         className='contact-input'
