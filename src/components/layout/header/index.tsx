@@ -15,7 +15,7 @@ interface HeaderProps {
 
 const Header: FC<HeaderProps> = ({ socials, email }) => {
   return (
-    <header className='p-5 mx-auto max-w-7xl sticky top-0 flex justify-between'>
+    <header className='p-5 mx-auto max-w-7xl sticky top-0 flex justify-between z-20'>
       <Nav socials={socials} />
 
       <motion.div animate='show' initial='hidden' variants={comingLeft}>
