@@ -11,8 +11,6 @@ interface SkillsProps {
 }
 
 const Skills: FC<SkillsProps> = ({ skills }) => {
-  console.log(skills);
-
   return (
     <motion.section
       className='px-10 mx-auto h-screen max-w-7xl snap-start'
