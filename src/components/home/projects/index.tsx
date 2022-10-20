@@ -17,7 +17,7 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
 
       <div className='h-[500px] w-full absolute top-[30%] left-0 bg-[#f7ab0a]/10 -skew-y-12' />
 
-      <div className='w-rull relative flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20'>
+      <div className='pb-10 w-rull relative flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80'>
         {projects.map((project, id) => {
           return (
             <Item

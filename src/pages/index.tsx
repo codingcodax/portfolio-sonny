@@ -36,7 +36,7 @@ interface HomeProps {
 /* eslint-disable */
 const Home: NextPage<HomeProps> = ({ pageInfo, skills, socials, projects }) => {
   return (
-    <div className='h-screen text-white bg-[rgb(36,36,36)] snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0'>
+    <div className='h-screen text-white bg-[rgb(36,36,36)] snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80'>
       <Header socials={socials} email={pageInfo.email} />
       <Hero pageInfo={pageInfo} />
       <About pageInfo={pageInfo} />
