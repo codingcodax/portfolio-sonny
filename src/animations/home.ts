@@ -20,3 +20,8 @@ export const skillsAnimation = {
     transition: { staggerChildren: 0.05, ease: 'easeInOut', duration: 1.2 },
   },
 };
+
+export const projectImageAnimation = {
+  hidden: { opacity: 0, y: -300 },
+  whileInView: { opacity: 1, y: 0, transition: { duration: 1.2 } },
+};
